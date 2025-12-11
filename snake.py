@@ -1,5 +1,5 @@
 from turtle import Turtle
-STARTING_POSITIONS = [-20,0,20]
+STARTING_POSITIONS = [0,-20,-40]
 UP = 90
 DOWN = 270
 RIGHT = 0
@@ -9,7 +9,8 @@ class Snake:
         self.turtles = []
         self.create_snake()
         self.head = self.turtles[0]
-
+        self.head.setheading(0)
+        self.head.color("GreenYellow")
     
     def create_snake(self):
         for position in range(0,3):

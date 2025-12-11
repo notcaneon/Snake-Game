@@ -7,10 +7,14 @@ class ScoreBoard(Turtle):
         self.color("white")
         self.ht()
         self.penup()
-        self.goto(-27,315) 
-        self.write(arg=f"Score:{self.score} ",move=False,align = "left",font=("Arial", 24, "normal"))
-        
+        self.goto(0,315) 
+        self.write(arg=f"Score:{self.score} ",move=False,align = "center",font=("Monocraft", 22, "normal"))
+
     def update_scoreboard(self):
         self.score += 1
         self.clear()
-        self.write(arg=f"Score:{self.score} ",move=False,align = "left",font=("Arial", 24, "normal"))
+        self.write(arg=f"Score:{self.score} ",move=False,align = "center",font=("Monocraft", 22, "normal"))
+
+    def game_over(self):
+        self.goto(0,0)
+        self.write(arg=f"GAME OVER!",move=False,align = "center",font=("Monocraft", 30, "normal"))
